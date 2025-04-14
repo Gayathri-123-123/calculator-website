@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator with Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator-container">
+    <!-- Calculator Display -->
+    <input id="display" type="text" readonly>
+
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+        <button onclick="addToExpression('7')">7</button>
+        <button onclick="addToExpression('8')">8</button>
+        <button onclick="addToExpression('9')">9</button>
+        <button onclick="addToExpression('/')">/</button>
+        <button onclick="addToExpression('4')">4</button>
+        <button onclick="addToExpression('5')">5</button>
+        <button onclick="addToExpression('6')">6</button>
+        <button onclick="addToExpression('*')">*</button>
+        <button onclick="addToExpression('1')">1</button>
+        <button onclick="addToExpression('2')">2</button>
+        <button onclick="addToExpression('3')">3</button>
+        <button onclick="addToExpression('-')">-</button>
+        <button onclick="addToExpression('0')">0</button>
+        <button onclick="addToExpression('.')">.</button>
+        <button onclick="addToExpression('+')">+</button>
+        <button onclick="evaluateExpression()">=</button>
+        <button onclick="clearEntry()">AC</button>
+        <button onclick="calculatePercentage()">%</button>
+        <button onclick="backspace()">Backspace</button>
+        <button onclick="addFunction('sin')">sin</button>
+        <button onclick="addFunction('cos')">cos</button>
+        <button onclick="addFunction('tan')">tan</button>
+        <button onclick="addFunction('log')">log</button>
+        <button onclick="addFunction('sqrt')">sqrt</button>
+        <button onclick="addToExpression('(')">(</button>
+        <button onclick="addToExpression(')')">)</button>
+    </div>
+
+    <!-- Currency Conversion Section -->
+    <div class="currency-converter">
+        <label for="from-currency">From Currency:</label>
+        <select id="from-currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+        </select>
+
+        <label for="to-currency">To Currency:</label>
+        <select id="to-currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount">
+
+        <button onclick="convertCurrency()">Convert</button>
+
+        <h3>Converted Amount: <span id="conversion-result"></span></h3>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
